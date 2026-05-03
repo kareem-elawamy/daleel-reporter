@@ -1,0 +1,35 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# Version control
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Bun lockfile (we use npm in Docker)
+bun.lockb
+
+# Wrangler (Cloudflare dev state)
+.wrangler
+
+# Lovable dev state
+.lovable
+
+# TanStack generated
+.tanstack
+
+# Misc
+*.md
+*.log
