@@ -3,7 +3,8 @@ import { TokenResponse } from "@/types/api";
 
 // Using Vite's import.meta.env for the API Base URL
 // Provide a sensible fallback for local development if the env var is missing
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://localhost:7198";
+const isProd = import.meta.env.PROD;
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (isProd ? "https://daleel-reporter.runasp.net" : "https://localhost:7198");
 
 export const axiosClient = axios.create({
   baseURL: API_BASE_URL,

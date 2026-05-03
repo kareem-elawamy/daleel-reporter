@@ -1,4 +1,5 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5249/api";
+const isProd = import.meta.env.PROD;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || (isProd ? "https://daleel-reporter.runasp.net" : "https://localhost:7198");
 
 export function getAuthToken() {
   if (typeof window !== "undefined") {
